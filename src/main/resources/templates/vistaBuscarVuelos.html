@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<form th:action="@{/clientes/listaVuelosDisponible}" th:object="${vuelo}" th:method="GET">
+		<table>
+			<tr>
+				<td>
+					<label>Origen:</label>
+				</td>
+
+				<td>
+					<input type="text" id="origen" th:field="${vuelo.origen}">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<label>Destino:</label>
+				</td>
+				<td>
+					<input type="text" id="destino" th:field="${vuelo.destino}">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<label>Fecha:</label>
+				</td>
+				<td>
+					<input type="text" id="fecha" th:field="${vuelo.fechaVuelo}">
+				</td>
+			</tr>
+
+			
+		</table>
+		<input class="btn btn-primary" type="submit" value="Buscar">
+	</form>
+</body>
+
+</html>
